@@ -22,7 +22,7 @@ public class Student{
     private int subjectCount = 0;
     private int itemCount = 0;
 
-    public static final int MAX_STUDENTS = 100;
+    private static final int MAX_STUDENTS = 100;
 
     
     public Student(String id, String name, String department, int year){

@@ -14,8 +14,8 @@ public class Student{
     private String[] subjectName = new String[6];
     private String[] itemName = new String[4];
 
-    private double[] maxScore = {100, 100, 100, 100};
-    private double[] weight = {30, 40, 20, 10};
+    private double[] maxScore = new double[4];
+    private double[] weight = new double[4];
 
     private double[][] scores = new double[6][4];
 
@@ -75,8 +75,6 @@ public class Student{
     public String[] getSubjectName(){return subjectName;}
     public double[][] getScores(){return scores;}
     public double[] getWeight(){return weight;}
-    public int getSubjectCount(){return subjectCount;}
-    public int getItemCount(){return itemCount;}
 
     
     public void showStudent(){

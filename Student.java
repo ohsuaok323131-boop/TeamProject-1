@@ -25,7 +25,6 @@ public class Student{
 
     private static final int MAX_STUDENTS = 100;
 
-    
     public Student(String id, String name, String department, int year){
         this.studentId = id;
         this.name = name;
@@ -33,7 +32,6 @@ public class Student{
         this.year = year;
     }
 
-    
     public void addSubject(String subjectName){
         if (subjectCount < 6){
             this.subjectName[subjectCount] = subjectName;
@@ -43,7 +41,6 @@ public class Student{
         }
     }
 
-    
     public void addItem(String itemName, double max, double weight){
         if (itemCount < 4){
             this.itemName[itemCount] = itemName;
@@ -55,7 +52,6 @@ public class Student{
         }
     }
 
-    
     public void setScore(int subjectIdx, int itemIdx, double score){
         if (checkScore(score, maxScore[itemIdx])){
             scores[subjectIdx][itemIdx] = score;
@@ -65,21 +61,24 @@ public class Student{
         }
     }
 
-    
     public boolean checkScore(double score, double max){
         return score >= 0 && score <= max;
     }
 
-    
     public String getId(){return studentId;}
+
     public String getName(){return name;}
+
     public String[] getSubjectName(){return subjectName;}
+
     public double[][] getScores(){return scores;}
+
     public double[] getWeight(){return weight;}
+
     public int getSubjectCount(){return subjectCount;}
+
     public int getItemCount(){return itemCount;}
 
-    
     public void showStudent(){
         System.out.println("ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ");
         System.out.println("학번: " + studentId);
@@ -88,16 +87,16 @@ public class Student{
         System.out.println("학년: " + year);
         System.out.println("..............................................");
 
-        System.out.print("과목");
+        System.out.print("과목 : ");
         for (int item = 0; item < itemCount; item++){
-            System.out.print(itemName[item]);
+            System.out.print(itemName[item]+" ");
         }
         System.out.println();
 
         for (int s = 0; s < subjectCount; s++){
-            System.out.print(subjectName[s]);
+            System.out.print(subjectName[s]+": ");
             for (int item = 0; item < itemCount; item++){
-                System.out.print(scores[s][item]);
+                System.out.print(scores[s][item]+"/");
             }
             System.out.println();
         }

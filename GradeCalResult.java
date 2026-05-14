@@ -14,6 +14,9 @@ public class GradeCalResult
     private double totalScore;
     private String grade;
 
+    private String subjectName;
+    
+    
     /**
      * GradeCalResult 클래스의 객체 생성자
      */
@@ -94,7 +97,11 @@ public class GradeCalResult
         }
         return this.grade;
     }
-
+    
+    public void setSubjectName(String subjectName){
+        this.subjectName=subjectName;
+    }
+    
     /**
      * 총점 반환 
      * @return   가중치가 반영 된 총점 반환
@@ -119,9 +126,10 @@ public class GradeCalResult
     public void display()
     {
         System.out.println("======결과 출력======");
-        System.out.println("학번 : "+studentId+"이름 : "+studentName);
-        System.out.println("총점 : "+totalScore);
-        System.out.println("학점 : "+grade);
+        System.out.println("학번 : " + studentId+" "+"이름 : "+studentName);
+        System.out.println("과목 : " + subjectName); 
+        System.out.printf("총점 : %.1f" ,totalScore);
+        System.out.println("학점 : " + grade);
         System.out.println();
     }
 

@@ -94,6 +94,8 @@ public class MyApp
             for (int j = 0; j < SUBJECT_COUNT; j++) {
                 GradeCalResult result = new GradeCalResult(students[i].getId(), students[i].getName());
                 
+                result.setSubjectName(students[i].getSubjectName()[j]);
+                
                 double[] subjectScores = students[i].getScores()[j];
                 double[] studentWeights = students[i].getWeight();
                 

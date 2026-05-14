@@ -116,7 +116,7 @@ public class GradeCalResult
     /**
      * 결과 출력 : 총점,학점 출력 
      */
-    public void display(int y)
+    public void display()
     {
         System.out.println("======결과 출력======");
         System.out.println("학번 : "+studentId+"이름 : "+studentName);

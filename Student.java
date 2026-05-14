@@ -75,6 +75,8 @@ public class Student{
     public String[] getSubjectName(){return subjectName;}
     public double[][] getScores(){return scores;}
     public double[] getWeight(){return weight;}
+    public int getSubjectCount(){return subjectCount;}
+    public int getItemCount(){return itemCount;}
 
     
     public void showStudent(){

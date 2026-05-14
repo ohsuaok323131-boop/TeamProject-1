@@ -17,7 +17,7 @@ public class GradeCalResult
     /**
      * GradeCalResult 클래스의 객체 생성자
      */
-    public GradeCalResult(String name, String id)
+    public GradeCalResult(String id,String name)
     {
         this.studentId=id;
         this.studentName=name;
@@ -30,7 +30,7 @@ public class GradeCalResult
      * 총점 = (점수1*가중치1)+(점수2*가중치2)+....
      *
      * @param scores(항목별 점수 배열 -중간,기말,과제,출석)
-     * @param scores(항목별 가중치 배열-0.3,0.4,0.2,0.1)
+     * @param weights(항목별 가중치 배열-30,40,20,10)
      * @return    가중치가 반영 된 총점 반환 
      */
     public double calcTotalScore(double[]scores, double[]weights)
@@ -38,7 +38,7 @@ public class GradeCalResult
         double total=0.0;
 
         for(int i=0;i<scores.length;i++){
-            total+=scores[i]*weights[i];
+            total+=(scores[i]*weights[i])/100;
         }
         this.totalScore=total;
         return this.totalScore;
